@@ -1,0 +1,154 @@
+/*Header Section*/
+
+.navbar-custom {
+  background-color: #B4E2DE;
+}
+
+.nav-link {
+  color: white;
+  margin: auto 1rem;
+}
+
+.nav-link:hover {
+  color: #FAC0BE;
+}
+
+.header {
+  margin-top: 8rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width:990px) {
+  .header {
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+#header-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+}
+
+@media (min-width: 575px) and (max-width:990px) {
+  #header-img {
+    max-width: 80%;
+  }
+  }
+
+  @media (max-width: 574px) {
+    #header-img {
+      max-width: 100%;
+    }
+    }
+
+/*Body Section and Home Page*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: auto 100px;
+  text-align: center;
+}
+
+@media (max-width: 574px) {
+  body {
+    margin: auto 50px;
+  }
+  }
+
+h1 {
+  color: #FAC0BE;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #75C8D1;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #88A5B3;
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.home-gallery {
+  max-width: 100%;
+  margin: 10px 0;
+}
+
+@media (max-width: 574px) {
+  .home-gallery {
+    max-width: 80%;
+    margin: 10px 20px;
+  }
+  }
+
+.home-gallery:hover {
+  opacity: 0.7;
+}
+
+a {
+  color: #FAC0BE;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #B4E2DE;
+  text-decoration: none;
+}
+
+/*88A5B3 gray-blue*/
+/*FAC0BE pink*/
+/*B4E2DE light aqua*/
+/*75C8D1 dark blue*/
+
+
+/* Activities Page */
+.centered-title {
+  margin-top: 14rem;
+}
+
+.activity-button {
+  background-color: #75C8D1;
+  border-color: #B4E2DE;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.heart-img {
+  max-width: 150px;
+}
+
+/* Porg Quiz Page */
+.title-image {
+  margin-top: 5rem;
+  width: 20%;
+}
+
+.quiz-title {
+  margin-top: 2rem;
+}
+
+/*Footer*/
+#footer {
+  background-color: #FAC0BE;
+  bottom: 0;
+  color: white;
+  font-size: 0.7rem;
+  margin: 5rem 0 0;
+  left: 0;
+  padding: 1rem 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
