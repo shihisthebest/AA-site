@@ -224,14 +224,54 @@ a:hover {
   margin: 0 auto 3rem;
 }
 
-/* .month-border {
-  border-color: #FAC0BE;
-  border-style: solid;
-  border-width: 5px;
-} */
-
 .calendar-month {
   font-size: 2rem;
+}
+
+.button-month-blue {
+  background-color: #E1F5F3;
+  border-color: #B4E2DE;
+  padding: 15px;
+}
+
+.button-month-pink{
+background-color: #FAE7E6;
+border-color: #FAC0BE;
+padding: 15px;
+}
+
+.calendar-modal {
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 1.2rem;
+  width: 40%;
+}
+
+.close {
+  color: #75C8D1;
+  float: right;
+  font-size: 2rem;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: #B4E2DE;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*Footer*/

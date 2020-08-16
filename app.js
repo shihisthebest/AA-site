@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
-  res.render("home");
+  res.render("index");
 })
 
 app.get("/gallery", function(req, res) {
@@ -520,7 +520,6 @@ app.post("/porg", function(req, res) {
   }
 
   app.post("/porg-refresh", function(req, res) {
-
       res.redirect("/porg");
     })
 
@@ -541,7 +540,46 @@ app.get("/adventure", function(req, res) {
 })
 
 app.get("/calendar", function(req, res) {
+
+
   res.render("calendar");
+})
+
+// If pressing a month button
+app.post("/calendar", function(req, res) {
+  let button = req.body.button;
+  console.log(button);
+
+  let modal = req.body.modal;
+  console.log(modal);
+
+})
+
+// If pressing close button
+
+app.post("calendar-close", function(req, res) {
+  res.redirect("/calendar");
+})
+
+// If opening the advent calendar month result
+app.post("calendar-result", function(req, res) {
+
+  let month = req.body.open;
+  let adventDescription = "";
+
+  switch (button) {
+    case "january":
+      adventDescription = "Here's your " + month + " advent calendar surprise!";
+      break;
+
+    default: "Generic surprise! YAY!"
+
+  }
+
+  res.render("calendar-result", {
+    adventDescription: adventDescription,
+    month: month
+  })
 })
 
 
