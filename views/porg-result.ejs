@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+
+<div class="margin-body">
+
+
+  <img src="" class="title-image" alt="">
+  <h3 class="quiz-title">Your Porg Mood is...</h3>
+  <img class="porg-image" src="images/<%= porgMood %>-porg.jpg" alt="">
+  <h2 class="porg-type"><%= porgType %></h2>
+
+  <p class="porg-description"><%= porgDescription %></p>
+
+  <form class="" action="/porg-refresh" method="post">
+    <button class="porg-button" type="submit" name="button">Another Porg!</button>
+  </form>
+</div>
+<%- include("partials/footer") -%>

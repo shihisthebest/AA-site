@@ -1,0 +1,30 @@
+<%- include("partials/header") -%>
+
+<img src="images/porg-header.png" class="title-image" alt="">
+<h2 class="quiz-title">What's Your Current Porg Mood?</h2>
+
+<form class="" action="/porg" method="post">
+  <div class="form-check">
+    <h3>You'll go down in history for your...</h3>
+    <input class="form-check-input" type="radio" name="selection" value="adorable" checked>
+    <label class="form-check-label">
+      Charm
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="selection" value="prodigious">
+    <label class="form-check-label">
+      Greatness
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="selection" value="curious">
+    <label class="form-check-label">
+      Discoveries
+    </label>
+  </div>
+  <button class="porg-button" type="submit" name="button">Tell My Porg-tune!</button>
+</form>
+
+
+<%- include("partials/footer") -%>
