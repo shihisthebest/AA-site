@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
-  res.render("index");
+  res.render("home");
 })
 
 app.get("/gallery", function(req, res) {
