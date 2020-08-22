@@ -548,10 +548,19 @@ app.get("/calendar", function(req, res) {
 // If pressing a month button
 app.post("/calendar", function(req, res) {
   let button = req.body.button;
-  console.log(button);
+  let modal = req.body.calendarModal;
 
-  let modal = req.body.modal;
+
+// Try to figure this out: if button clicked is the month button, then show modal. If button clicked on is modal accept button, then redirect to calendar result. If button clicked on is close, redirect to calendar home page.
+  //
+  // button.addEventListener("click", function() {
+  //   alert("hi!");
+  // })
+
+  console.log(button);
   console.log(modal);
+
+  // console.log(button);
 
 })
 
