@@ -204,7 +204,7 @@ a:hover {
 
 .images-heading-blue {
   color: #B4E2DE;
-  padding-top: 2rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
 }
 
@@ -239,7 +239,7 @@ a:hover {
 
 .gallery-column span {
   background: #FAC0BE;
-  top: 80%;
+  top: 15rem;
   left: 50%;
   opacity: 0;
   padding: 10px;
