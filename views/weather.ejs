@@ -1,3 +1,13 @@
 <%- include("partials/header") -%>
 
+<h1 class="centered-title-small">Feeling Bored?</h1>
+
+<form action="/weather" method="post">
+    <div class="city-submission">
+      <h3><label for="input">Check Current Weather Conditions</label></h3>
+  <input type="text" name="city" value="" placeholder="Enter a City Name">
+  </div>
+  <button class="activity-button" type="submit" name="button">Entertain Me!</button>
+</form>
+
 <%- include("partials/footer") -%>

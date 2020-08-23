@@ -177,7 +177,7 @@ a:hover {
 }
 
 .more-photos {
-  color: #75C8D1;
+  color: #FAC0BE;
   margin: 3rem auto;
 }
 
@@ -331,6 +331,13 @@ a:hover {
 .porg-type {
   margin: 2rem 0 0;
 }
+
+/* Weather */
+
+.city-submission {
+  margin: 5rem auto; 
+}
+
 
 /* Advent Calendar */
 

@@ -5,11 +5,18 @@
   <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-12">
       <form class="" action="/calendar" method="post">
-        <button class="button-month-blue" name="button" value="january">
+        <button class="button-month-blue" name="submit" value="january">
           <h4>Open me on</h4>
           <h2 class="calendar-month">January 27</h2>
         </button>
-        <div class="calendar-modal" name="calendarModal" value="jkjdfdsa">
+        <div class="calendar-modal" name="calendarModal" value="january-modal">
+
+            <% if(modal === "january-modal") {%>
+            <% console.log("HI");%>
+            <%}%>
+
+
+
           <div class="modal-content" name="contentModel" value="valuessssss">
             <button type="submit" class="close" name="close" value="close">&times;</button>
             <p>January Advent Calendar</p>

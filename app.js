@@ -3,6 +3,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const https = require("https");
 
 const app = express();
 
@@ -520,8 +521,8 @@ app.post("/porg", function(req, res) {
   }
 
   app.post("/porg-refresh", function(req, res) {
-      res.redirect("/porg");
-    })
+    res.redirect("/porg");
+  })
 
 
   res.render("porg-result", {
@@ -532,7 +533,40 @@ app.post("/porg", function(req, res) {
 })
 
 app.get("/weather", function(req, res) {
-  res.render("weather");
+
+res.render("weather");
+
+})
+
+app.post("/weather", function (req, res) {
+  const api = "56c13f75f777b9e0a170e8b87fccf8a0";
+  const city = req.body.city;
+  const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=56c13f75f777b9e0a170e8b87fccf8a0&units=metric";
+
+
+    https.get(url, function(response) {
+      response.on("data", function(data) {
+
+        const weatherData = JSON.parse(data);
+        const temp = weatherData.main.temp + "°C"
+        const description = weatherData.weather[0].description;
+        const iconData = weatherData.weather[0].icon;
+        const imageURL = "https://openweathermap.org/img/wn/" + iconData + "@4x.png";
+        const humidity = weatherData.main.humidity;
+        const pressure = weatherData.main.pressure;
+
+        console.log(city);
+
+        res.render("weather-result", {
+          city: city,
+          description: description,
+          humidity: humidity,
+          imageURL: imageURL,
+          pressure: pressure,
+          temp: temp
+        });
+      })
+    });
 })
 
 app.get("/adventure", function(req, res) {
@@ -547,22 +581,16 @@ app.get("/calendar", function(req, res) {
 
 // If pressing a month button
 app.post("/calendar", function(req, res) {
-  let button = req.body.button;
-  let modal = req.body.calendarModal;
+  let open = req.body.submit;
+  let modal = open + "-modal";
 
 
-// Try to figure this out: if button clicked is the month button, then show modal. If button clicked on is modal accept button, then redirect to calendar result. If button clicked on is close, redirect to calendar home page.
-  //
-  // button.addEventListener("click", function() {
-  //   alert("hi!");
-  // })
-
-  console.log(button);
+  console.log(open);
   console.log(modal);
 
-  // console.log(button);
-
-})
+  res.render("calendar", {
+    modal: modal
+  });
 
 // If pressing close button
 
@@ -581,7 +609,8 @@ app.post("calendar-result", function(req, res) {
       adventDescription = "Here's your " + month + " advent calendar surprise!";
       break;
 
-    default: "Generic surprise! YAY!"
+    default:
+      "Generic surprise! YAY!"
 
   }
 

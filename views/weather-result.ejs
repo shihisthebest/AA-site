@@ -1,0 +1,15 @@
+<%- include("partials/header") -%>
+
+<h1 class="centered-title-small">The weather in <%=city%> is:</h1>
+<img src="<%=imageURL%>" alt="">
+
+<h3><%= temp %></h3>
+<h3><%= description %></h3>
+
+<form action="/weather" method="post">
+  <input type="text" name="city" value="" placeholder="Enter a City Name">
+  <button class="activity-button" type="submit" name="button">Check Another!</button>
+</form>
+
+
+<%- include("partials/footer") -%>
