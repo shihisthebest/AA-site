@@ -471,6 +471,11 @@ app.post("/porg", function(req, res) {
       porgDescription = "If you thought Awkward Penguin was awkward, you might want to take a look in the bathroom mirror. Sheldon Cooper worships you, and you have an uncanny knack for saying the exact wrong thing at the exact wrong time. (Remember that lady that you congratulated for her upcoming arrival? Yeah, she wasn't pregnant.) You also flap your wings a lot, which...yeah, makes you look pretty awkward most of the time. Derp.";
       break;
 
+      case "curious":
+        porgDescription = "Wow, what a curious little porg you are! From the largest mountaintops to the tiniest pebbles, there's nothing you won't dig up in your quest to discover a greater truth (or maybe just something interesting). When you think someone knows something that you don't, you tend to coo repeatedly until you get an answer! Just be careful not to stick your porg nose somewhere it doesn't belong.";
+        break;
+
+
     case "friendly":
       porgDescription = "What an amiable porg you are! Everyone knows you as the flock's social butterfly, and you go out of your way to wail hello to every porg on the island. You've even managed to befriend the Awkward Porg, which is no mean feat (and definitive proof that your social charm is out of this galaxy).";
       break;
