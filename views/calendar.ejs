@@ -3,114 +3,263 @@
 <div class="calendar-background centered-title-small">
 
   <div class="row">
+    <!-- January -->
     <div class="col-lg-4 col-md-6 col-sm-12">
-      <form class="" action="/calendar" method="post">
-        <button class="button-month-blue" name="submit" value="january">
-          <h4>Open me on</h4>
-          <h2 class="calendar-month">January 27</h2>
-        </button>
-        <div class="calendar-modal" name="calendarModal" value="january-modal">
 
-            <% if(modal === "january-modal") {%>
-            <% console.log("HI");%>
-            <%}%>
+      <button class="button-month-blue" name="submit" value="january" onclick="document.getElementById('january-modal').style.display = 'block'">
+        <h4>Open me on</h4>
+        <h2 class="calendar-month">January 27</h2>
+      </button>
 
+      <div id="january-modal" class="calendar-modal" name="calendarModal" value="january-modal">
+        <div class="modal-content" name="contentModel">
+          <h4>Are you sure you want to open your calendar surprise?</h4>
+          <div class="modal-buttons">
 
+            <form class="modal-form" action="/calendar" method="post">
+              <button type="submit" class="modal-confirm-pink" name="month" value="january">Yes, it's January 27th!</button>
+            </form>
+            <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('january-modal').style.display = 'none'">No, I'll wait patiently...</button>
+          </div>
 
-          <div class="modal-content" name="contentModel" value="valuessssss">
-            <button type="submit" class="close" name="close" value="close">&times;</button>
-            <p>January Advent Calendar</p>
-            <!-- <form class="" action="/calendar-result" method="post"> -->
-              <button type="submit" class="open" name="open" value="january">Yes, it's January 27th!</button>
-            <!-- </form> -->
+        </div>
+      </div>
+    </div>
+    <!-- February -->
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <button class="button-month-pink" name="submit" value="february" onclick="document.getElementById('february-modal').style.display = 'block'">
+        <h4>Open me on</h4>
+        <h2 class="calendar-month">February 27</h2>
+      </button>
+
+      <div id="february-modal" class="calendar-modal" name="calendarModal" value="february-modal">
+        <div class="modal-content" name="contentModel">
+          <h4>Are you sure you want to open your calendar surprise?</h4>
+          <div class="modal-buttons">
+
+            <form class="modal-form" action="/calendar" method="post">
+              <button type="submit" class="modal-confirm-pink" name="month" value="february">Yes, it's February 27th!</button>
+            </form>
+            <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('february-modal').style.display = 'none'">No, I'll wait patiently...</button>
           </div>
         </div>
-
-      </form>
+      </div>
     </div>
 
-
-
+    <!-- March -->
     <div class="col-lg-4 col-md-6 col-sm-12">
-      <button class="button-february button-month-pink">
-        <h4>Open me on</h4>
-        <h1 class="calendar-month">February 27</h1>
-      </button>
-    </div>
-
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
+      <button class="button-month-blue" name="submit" value="march" onclick="document.getElementById('march-modal').style.display = 'block'">
         <h4>Open me on</h4>
         <h2 class="calendar-month">March 27</h2>
-      </a>
+      </button>
+
+      <div id="march-modal" class="calendar-modal" name="calendarModal" value="march-modal">
+        <div class="modal-content" name="contentModel">
+          <h4>Are you sure you want to open your calendar surprise?</h4>
+          <div class="modal-buttons">
+
+            <form class="modal-form" action="/calendar" method="post">
+              <button type="submit" class="modal-confirm-pink" name="month" value="march">Yes, it's March 27th!</button>
+            </form>
+            <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('march-modal').style.display = 'none'">No, I'll wait patiently...</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
-        <h4>Open me on</h4>
-        <h1 class="calendar-month">April 27</h1>
-      </a>
-    </div>
+<!-- April -->
 
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
-        <h4>Open me on</h4>
-        <h2 class="calendar-month">May 27</h2>
-      </a>
-    </div>
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <button class="button-month-pink" name="submit" value="april" onclick="document.getElementById('april-modal').style.display = 'block'">
+    <h4>Open me on</h4>
+    <h2 class="calendar-month">April 27</h2>
+  </button>
 
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
-        <h4>Open me on</h4>
-        <h1 class="calendar-month">June 27</h1>
-      </a>
-    </div>
+  <div id="april-modal" class="calendar-modal" name="calendarModal" value="april-modal">
+    <div class="modal-content" name="contentModel">
+      <h4>Are you sure you want to open your calendar surprise?</h4>
+      <div class="modal-buttons">
 
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
-        <h4>Open me on</h4>
-        <h2 class="calendar-month">July 27</h2>
-      </a>
+        <form class="modal-form" action="/calendar" method="post">
+          <button type="submit" class="modal-confirm-pink" name="month" value="april">Yes, it's April 27th!</button>
+        </form>
+        <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('april-modal').style.display = 'none'">No, I'll wait patiently...</button>
+      </div>
     </div>
-
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
-        <h4>Open me on</h4>
-        <h1 class="calendar-month">August 27</h1>
-      </a>
-    </div>
-
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
-        <h4>Open me on</h4>
-        <h2 class="calendar-month">September 27</h2>
-      </a>
-    </div>
-
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
-        <h4>Open me on</h4>
-        <h1 class="calendar-month">October 27</h1>
-      </a>
-    </div>
-
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
-        <h4>Open me on</h4>
-        <h2 class="calendar-month">November 27</h2>
-      </a>
-    </div>
-
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <a href="#">
-        <h4>Open me on</h4>
-        <h1 class="calendar-month">December 27</h1>
-      </a>
-    </div>
-
   </div>
 </div>
 
+<!-- May -->
 
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <button class="button-month-blue" name="submit" value="may" onclick="document.getElementById('may-modal').style.display = 'block'">
+    <h4>Open me on</h4>
+    <h2 class="calendar-month">May 27</h2>
+  </button>
+
+  <div id="may-modal" class="calendar-modal" name="calendarModal" value="may-modal">
+    <div class="modal-content" name="contentModel">
+      <h4>Are you sure you want to open your calendar surprise?</h4>
+      <div class="modal-buttons">
+
+        <form class="modal-form" action="/calendar" method="post">
+          <button type="submit" class="modal-confirm-pink" name="month" value="may">Yes, it's May 27th!</button>
+        </form>
+        <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('may-modal').style.display = 'none'">No, I'll wait patiently...</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- June -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <button class="button-month-pink" name="submit" value="june" onclick="document.getElementById('june-modal').style.display = 'block'">
+    <h4>Open me on</h4>
+    <h2 class="calendar-month">June 27</h2>
+  </button>
+
+  <div id="june-modal" class="calendar-modal" name="calendarModal" value="june-modal">
+    <div class="modal-content" name="contentModel">
+      <h4>Are you sure you want to open your calendar surprise?</h4>
+      <div class="modal-buttons">
+
+        <form class="modal-form" action="/calendar" method="post">
+          <button type="submit" class="modal-confirm-pink" name="month" value="june">Yes, it's June 27th!</button>
+        </form>
+        <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('june-modal').style.display = 'none'">No, I'll wait patiently...</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- July -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <button class="button-month-blue" name="submit" value="july" onclick="document.getElementById('july-modal').style.display = 'block'">
+    <h4>Open me on</h4>
+    <h2 class="calendar-month">July 27</h2>
+  </button>
+
+  <div id="july-modal" class="calendar-modal" name="calendarModal" value="july-modal">
+    <div class="modal-content" name="contentModel">
+      <h4>Are you sure you want to open your calendar surprise?</h4>
+      <div class="modal-buttons">
+
+        <form class="modal-form" action="/calendar" method="post">
+          <button type="submit" class="modal-confirm-pink" name="month" value="july">Yes, it's July 27th!</button>
+        </form>
+        <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('july-modal').style.display = 'none'">No, I'll wait patiently...</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- August -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <button class="button-month-pink" name="submit" value="august" onclick="document.getElementById('august-modal').style.display = 'block'">
+    <h4>Open me on</h4>
+    <h2 class="calendar-month">August 27</h2>
+  </button>
+
+  <div id="august-modal" class="calendar-modal" name="calendarModal" value="august-modal">
+    <div class="modal-content" name="contentModel">
+      <h4>Are you sure you want to open your calendar surprise?</h4>
+      <div class="modal-buttons">
+
+        <form class="modal-form" action="/calendar" method="post">
+          <button type="submit" class="modal-confirm-pink" name="month" value="august">Yes, it's August 27th!</button>
+        </form>
+        <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('august-modal').style.display = 'none'">No, I'll wait patiently...</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- September -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <button class="button-month-blue" name="submit" value="september" onclick="document.getElementById('september-modal').style.display = 'block'">
+    <h4>Open me on</h4>
+    <h2 class="calendar-month">September 27</h2>
+  </button>
+
+  <div id="september-modal" class="calendar-modal" name="calendarModal" value="september-modal">
+    <div class="modal-content" name="contentModel">
+      <h4>Are you sure you want to open your calendar surprise?</h4>
+      <div class="modal-buttons">
+
+        <form class="modal-form" action="/calendar" method="post">
+          <button type="submit" class="modal-confirm-pink" name="month" value="september">Yes, it's September 27th!</button>
+        </form>
+        <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('september-modal').style.display = 'none'">No, I'll wait patiently...</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- October -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <button class="button-month-pink" name="submit" value="october" onclick="document.getElementById('october-modal').style.display = 'block'">
+    <h4>Open me on</h4>
+    <h2 class="calendar-month">October 27</h2>
+  </button>
+
+  <div id="october-modal" class="calendar-modal" name="calendarModal" value="october-modal">
+    <div class="modal-content" name="contentModel">
+      <h4>Are you sure you want to open your calendar surprise?</h4>
+      <div class="modal-buttons">
+
+        <form class="modal-form" action="/calendar" method="post">
+          <button type="submit" class="modal-confirm-pink" name="month" value="october">Yes, it's October 27th!</button>
+        </form>
+        <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('october-modal').style.display = 'none'">No, I'll wait patiently...</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- November -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <button class="button-month-blue" name="submit" value="november" onclick="document.getElementById('november-modal').style.display = 'block'">
+    <h4>Open me on</h4>
+    <h2 class="calendar-month">November 27</h2>
+  </button>
+
+  <div id="november-modal" class="calendar-modal" name="calendarModal" value="november-modal">
+    <div class="modal-content" name="contentModel">
+      <h4>Are you sure you want to open your calendar surprise?</h4>
+      <div class="modal-buttons">
+
+        <form class="modal-form" action="/calendar" method="post">
+          <button type="submit" class="modal-confirm-pink" name="month" value="november">Yes, it's November 27th!</button>
+        </form>
+        <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('november-modal').style.display = 'none'">No, I'll wait patiently...</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- December -->
+<div class="col-lg-4 col-md-6 col-sm-12">
+  <button class="button-month-pink" name="submit" value="december" onclick="document.getElementById('december-modal').style.display = 'block'">
+    <h4>Open me on</h4>
+    <h2 class="calendar-month">December 27</h2>
+  </button>
+
+  <div id="december-modal" class="calendar-modal" name="calendarModal" value="december-modal">
+    <div class="modal-content" name="contentModel">
+      <h4>Are you sure you want to open your calendar surprise?</h4>
+      <div class="modal-buttons">
+
+        <form class="modal-form" action="/calendar" method="post">
+          <button type="submit" class="modal-confirm-pink" name="month" value="december">Yes, it's December 27th!</button>
+        </form>
+        <button type="submit" class="modal-confirm-blue" onclick="document.getElementById('december-modal').style.display = 'none'">No, I'll wait patiently...</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
 
 <%- include("partials/footer") -%>

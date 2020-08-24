@@ -534,39 +534,39 @@ app.post("/porg", function(req, res) {
 
 app.get("/weather", function(req, res) {
 
-res.render("weather");
+  res.render("weather");
 
 })
 
-app.post("/weather", function (req, res) {
+app.post("/weather", function(req, res) {
   const api = "56c13f75f777b9e0a170e8b87fccf8a0";
   const city = req.body.city;
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=56c13f75f777b9e0a170e8b87fccf8a0&units=metric";
 
 
-    https.get(url, function(response) {
-      response.on("data", function(data) {
+  https.get(url, function(response) {
+    response.on("data", function(data) {
 
-        const weatherData = JSON.parse(data);
-        const temp = weatherData.main.temp + "°C"
-        const description = weatherData.weather[0].description;
-        const iconData = weatherData.weather[0].icon;
-        const imageURL = "https://openweathermap.org/img/wn/" + iconData + "@4x.png";
-        const humidity = weatherData.main.humidity;
-        const pressure = weatherData.main.pressure;
+      const weatherData = JSON.parse(data);
+      const temp = weatherData.main.temp + "°C"
+      const description = weatherData.weather[0].description;
+      const iconData = weatherData.weather[0].icon;
+      const imageURL = "https://openweathermap.org/img/wn/" + iconData + "@4x.png";
+      const humidity = weatherData.main.humidity;
+      const pressure = weatherData.main.pressure;
 
-        console.log(city);
+      console.log(city);
 
-        res.render("weather-result", {
-          city: city,
-          description: description,
-          humidity: humidity,
-          imageURL: imageURL,
-          pressure: pressure,
-          temp: temp
-        });
-      })
-    });
+      res.render("weather-result", {
+        city: city,
+        description: description,
+        humidity: humidity,
+        imageURL: imageURL,
+        pressure: pressure,
+        temp: temp
+      });
+    })
+  });
 })
 
 app.get("/adventure", function(req, res) {
@@ -574,52 +574,91 @@ app.get("/adventure", function(req, res) {
 })
 
 app.get("/calendar", function(req, res) {
-
-
   res.render("calendar");
 })
 
 // If pressing a month button
 app.post("/calendar", function(req, res) {
-  let open = req.body.submit;
-  let modal = open + "-modal";
 
-
-  console.log(open);
-  console.log(modal);
-
-  res.render("calendar", {
-    modal: modal
-  });
-
-// If pressing close button
-
-app.post("calendar-close", function(req, res) {
-  res.redirect("/calendar");
-})
-
-// If opening the advent calendar month result
-app.post("calendar-result", function(req, res) {
-
-  let month = req.body.open;
+  const month = req.body.month;
+  let adventTitle = "";
   let adventDescription = "";
 
-  switch (button) {
+  switch (month) {
     case "january":
-      adventDescription = "Here's your " + month + " advent calendar surprise!";
+      adventTitle = "Let's go to the zoo!";
+      adventDescription = "The start of a new year is a great time to say hello to the animals! From giraffes to jaguars and parrots to penguins, zoos offer a great place for 2021 to take flight. And who knows? Maybe there'll even be a surprise porg sighting along the way!";
       break;
+
+      case "february":
+        adventTitle = "Let's go tandem biking!";
+        adventDescription = "Gross matching couple shirts are optional for this two-as-one bike ride! While there's no guarantee that both of us will pull our weight evenly or avoid toppling over in a moment of disunity, the novelty is sure to offer us the ride of a lifetime.";
+        break;
+
+      case "march":
+        adventTitle = "Let's visit Mount Wilson!";
+        adventDescription = "It's not every day a professional astrophysicist takes a loony layperson to visit this world-famous observatory, but this month is the month! We'll explore the grounds, go for a hike, lay out a picnic, and simply enjoy the sights from on high. Maybe the aforementioned astrophysicist will even share some of his coveted knowledge during a telescope visit!";
+        break;
+
+      case "april":
+        adventTitle = "Let's get our A games on at a game cafe!";
+        adventDescription = "Whether it's an arcade bar like Button Mash, a board game joint like Game Haus, or just your good ol' internet cafe, it's time to channel our inner nerds! We'll spend our day mashing the A button and cursing loudly at the screen in public--and let's face it, there's no better bonding activity than that. So what are you waiting for? Grab your gaming gloves and let's get going!";
+        break;
+
+      case "may":
+        adventTitle = "Let's listen to some tunes at a jazz bar!";
+        adventDescription = "It's time to get groovy with some seriously jazzy tunes! This month, we'll find a jazz bar with enough saxophone sass and foot-tappin' beats to leave us humming the whole night long. Extra points for every tune or musical riff you can name!";
+        break;
+
+      case "june":
+        adventTitle = "Let's relax with a spa day!";
+        adventDescription = "We're going to Wi! (Or someplace like it.) Get ready to don your best sheep-shaped head towels because we're turning up the heat on a day filled with saunas, steam rooms, and tons of relaxation. Maybe we'll even feel fancy enough to order food or a special spa treatment package? The spa sky is the limit!";
+        break;
+
+      case "july":
+        adventTitle = "Let's go kayaking!";
+        adventDescription = "The pandemic might have gotten the better of us last year, but the sun is shining (hopefully) and it's a great month for a kayak trip! Gliding out on the smooth waters of Marina Del Ray or somewhere even more adventurous is definitely something you should make time to do together this month.";
+        break;
+
+      case "august":
+        adventTitle = "Let's open a surprise together!";
+        adventDescription = "Being apart is an excellent excuse to try something new this year! Pick out a surprise that you think the other person will love (yes, Amazon is fine--$20 limit) and ship it to them. Once both packages arrive, sit down for a fun-filled virtual unwrapping session!";
+        break;
+
+      case "september":
+        adventTitle = "Let's watch a movie at a drive-in theater!";
+        adventDescription = "While it's a true tragedy that we won't get to watch free movies at AMC anytime soon, the alternative will leave you honking for more! We'll pick a flick to see on the big screen from the comfort of our cars--plus, no sticky aisles or popcorn-strewn seats to worry about. It's the cool new (pandemic-enforced) retro thing to do!";
+        break;
+
+      case "october":
+        adventTitle = "Let's go apple picking!";
+        adventDescription = "Fuji, Gala, Red Delicious, and Granny Smith...The time is ripe to try our hands at apple picking! Once we scout out a local orchard, we'll spend our day strolling the tree-lined rows and lounging in the dappled shade. Or, more likely, we'll feel totally sweaty from heaving around buckling barrels of apples because we got too darn greedy.";
+        break;
+
+      case "november":
+        adventTitle = "Let's write holiday letters!";
+        adventDescription = "'Tis the season for good old-fashioned holiday gratitude! The epistolary novel has been a popular form since its advent in the 15th century and Christmas cards have been in vogue since the days of Charles Dickens, so obviously we're doing a bit of both. Handwrite your holiday letter and snail mail it sometime this month!";
+        break;
+
+      case "december":
+        adventTitle = "Let's have a virtual gaming day!";
+        adventDescription = "Boot up Steam and shake out your gaming hand, because the games are about to begin! This month, it's me vs. you (or us vs. the world?) in our inaugural two-person day-long gaming session. Whether it's Civ or something new, you best be ready!";
+        break;
 
     default:
       "Generic surprise! YAY!"
-
   }
 
   res.render("calendar-result", {
+    adventTitle: adventTitle,
     adventDescription: adventDescription,
     month: month
   })
 })
 
+app.post("/calendar-result", function(req, res) {
+  res.redirect("calendar");
+})
 
 app.listen(process.env.PORT || 3000, function() {
   console.log("Server started on port " + (process.env.PORT || 3000));

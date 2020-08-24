@@ -116,6 +116,11 @@ a:hover {
   text-decoration: none;
 }
 
+button:focus {
+  border: none;
+  outline: white;
+}
+
 /*88A5B3 gray-blue*/
 /*FAC0BE pink*/
 /*B4E2DE light aqua*/
@@ -334,19 +339,22 @@ a:hover {
 
 /* Weather */
 
-.city-submission {
-  margin: 5rem auto; 
+.weather-image {
+  margin-bottom: 3rem;
+  width: 10%;
 }
 
+@media (max-width:575px) {
+  .weather-image {
+    width: 50%;
+  }
+  }
+
+.city {
+  margin-top: 4rem;
+}
 
 /* Advent Calendar */
-
-/* .calendar-background {
-  background-image: url("../images/calendar-background.jpg");
-  background-repeat: no-repeat;
-  padding-top: 10rem;
-  background-size: 100%;
-} */
 
 .centered-title-small {
   margin-top: 9rem;
@@ -364,12 +372,14 @@ a:hover {
   background-color: #E1F5F3;
   border-color: #B4E2DE;
   padding: 15px;
+  width:75%;
 }
 
 .button-month-pink{
 background-color: #FAE7E6;
 border-color: #FAC0BE;
 padding: 15px;
+width: 75%;
 }
 
 .calendar-modal {
@@ -386,24 +396,56 @@ padding: 15px;
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 1.2rem;
   width: 40%;
 }
 
-.close {
-  color: #75C8D1;
-  float: right;
-  font-size: 2rem;
-  font-weight: bold;
-  opacity: 1;
+@media (min-width: 575px) and (max-width:990px) {
+  .modal-content {
+    width: 60%;
+  }
+  }
+
+  @media (max-width: 574px) {
+    .modal-content {
+      width: 80%;
+    }
+    }
+
+.modal-form {
+  display: inline-block;
+  text-align: center;
+  width: 40%;
 }
 
-.close:hover,
-.close:focus {
-  color: #B4E2DE;
-  text-decoration: none;
-  cursor: pointer;
+.modal-confirm-pink {
+  background-color: #FAC0BE;
+  border-color: #FFBCBA;
+  border-radius: 15px;
+  color: white;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.modal-confirm-blue {
+  background-color: #75C8D1;
+  border-color: #75C8D1;
+  border-radius: 15px;
+  color: white;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  right: 0;
+  width: 40%;
+}
+
+.advent-image {
+  margin-top: 5rem;
+  width: 40%;
 }
 
 /*Footer*/

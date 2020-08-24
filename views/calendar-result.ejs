@@ -2,15 +2,14 @@
 
 <div class="margin-body">
 
-
-  <img src="" class="title-image" alt="">
-  <h3 class="quiz-title">HI<%= button %></h3>
-  <img class="advent-image" src="images/<%= button %>-advent.jpg" alt="">
+  <img class="advent-image" src="images/<%= month %>-advent.jpg" alt="">
+  <h3 class="quiz-title"><%= month %></h3>
+  <h4><%=adventTitle%></h4>
 
   <p class="advent-description"><%= adventDescription %></p>
 
-  <form class="" action="/calendar" method="post">
-    <button class="calendar-button" type="submit" name="button">Take Me Back to the Calendar</button>
+  <form class="" action="/calendar-result" method="post">
+    <button class="activity-button calendar-button" type="submit" name="button">Take Me Back to the Calendar</button>
   </form>
 </div>
 <%- include("partials/footer") -%>
